@@ -106,10 +106,11 @@ fun Layout(){
                 modifier = Modifier.size(width = 200.dp, height = 200.dp))
             Spacer(modifier = Modifier.width(20.dp))
             Column {
-                Text(text = "Siberian Husky", fontWeight = FontWeight.Bold, fontSize =15.sp )
+                Text(text = "Buldog", fontWeight = FontWeight.Bold, fontSize =15.sp )
                 Text(text = "The Siberian Husky is a medium-sized working sled dog breed. The breed belongs to the Spitz genetic family. ")
             }
         }
+        //End of Row2
         Spacer(modifier = Modifier.height(5.dp))
 
         Row {
@@ -118,10 +119,11 @@ fun Layout(){
                 modifier = Modifier.size(width = 200.dp, height = 200.dp))
             Spacer(modifier = Modifier.width(20.dp))
             Column {
-                Text(text = "Siberian Husky", fontWeight = FontWeight.Bold, fontSize =15.sp )
+                Text(text = "German Shepherd", fontWeight = FontWeight.Bold, fontSize =15.sp )
                 Text(text = "The Siberian Husky is a medium-sized working sled dog breed. The breed belongs to the Spitz genetic family. ")
             }
         }
+        //End of Row3
         Button(onClick = { /*TODO*/ },
             modifier = Modifier.fillMaxWidth(),
             shape = CircleShape) {
