@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">lagat</string>
     <string name="title_activity_layoutactivity">layoutactivity</string>
+    <string name="title_activity_intent">IntentActivity</string>
+    <string name="title_activity_intents">IntentsActivity</string>
 </resources>
