@@ -3,4 +3,5 @@
     <string name="title_activity_layoutactivity">layoutactivity</string>
     <string name="title_activity_intent">IntentActivity</string>
     <string name="title_activity_intents">IntentsActivity</string>
+    <string name="title_activity_form">FormActivity</string>
 </resources>
