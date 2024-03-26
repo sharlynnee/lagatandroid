@@ -1,5 +1,6 @@
 package com.example.lagat
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.provider.MediaStore
@@ -48,6 +49,7 @@ class IntentActivity : ComponentActivity() {
     }
 }
 
+@SuppressLint("SuspiciousIndentation")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun myIntents(){
@@ -210,6 +212,16 @@ fun myIntents(){
                     mContext.startActivity(Intent(mContext,FormActivity::class.java))
                 },
             textAlign = TextAlign.Center)
+        Text(
+            text = "Create an Account",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.fillMaxWidth().
+            clickable {
+
+            },
+            textAlign = TextAlign.Center
+        )
     }
 
 }

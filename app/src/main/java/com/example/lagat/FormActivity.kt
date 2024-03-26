@@ -1,6 +1,5 @@
 package com.example.lagat
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -35,7 +34,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.modifier.modifierLocalMapOf
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -85,7 +83,7 @@ fun MyForm(){
         ) {
             Image(painter = painterResource(id = R.drawable.about) ,
                 contentDescription ="register",
-                modifier = Modifier.size(180.dp,))
+                modifier = Modifier.size(180.dp))
         }
         Text(
             text = "Create an Account",

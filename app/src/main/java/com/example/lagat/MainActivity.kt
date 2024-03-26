@@ -60,11 +60,11 @@ fun Demo(){
             fontStyle = FontStyle.Italic,
             fontWeight = FontWeight.Bold)
         Text(text = "Discover the latest app development tools, platform updates, training, and documentation for developers across every Android device.")
-        Button(onClick = { /*TODO*/ },
+        Button(onClick = { mContext.startActivity(Intent(mContext,DestinationActivity::class.java)) },
             shape = CircleShape,
             colors = ButtonDefaults.buttonColors(Color.DarkGray),
             modifier = Modifier.align(Alignment.CenterHorizontally)) {
-            Text(text = "See More")
+            Text(text = "Destination")
         }
 
         Spacer(modifier = Modifier.height(15.dp))
