@@ -5,4 +5,5 @@
     <string name="title_activity_intents">IntentsActivity</string>
     <string name="title_activity_form">FormActivity</string>
     <string name="title_activity_destination">DestinationActivity</string>
+    <string name="title_activity_explore">ExploreActivity</string>
 </resources>

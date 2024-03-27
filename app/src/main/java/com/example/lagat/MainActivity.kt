@@ -8,6 +8,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -60,12 +61,17 @@ fun Demo(){
             fontStyle = FontStyle.Italic,
             fontWeight = FontWeight.Bold)
         Text(text = "Discover the latest app development tools, platform updates, training, and documentation for developers across every Android device.")
-        Button(onClick = { mContext.startActivity(Intent(mContext,DestinationActivity::class.java)) },
-            shape = CircleShape,
+        Button(onClick = {
+            mContext.startActivity(Intent(mContext,DestinationActivity::class.java))
+        },
+            shape = RoundedCornerShape(5.dp),
             colors = ButtonDefaults.buttonColors(Color.DarkGray),
-            modifier = Modifier.align(Alignment.CenterHorizontally)) {
+            modifier = Modifier
+                .padding(start = 30.dp, end = 30.dp)
+        ) {
             Text(text = "Destination")
         }
+
 
         Spacer(modifier = Modifier.height(15.dp))
         Text(text = "Types of cars",
@@ -121,16 +127,30 @@ fun Demo(){
         }
         Spacer(modifier = Modifier.height(10.dp))
 
-        Button(onClick = {
-                         mContext.startActivity(Intent(mContext,layoutactivity::class.java))
-        },
-            shape = RoundedCornerShape(5.dp),
-            colors = ButtonDefaults.buttonColors(Color.DarkGray),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 30.dp, end = 30.dp)
-        ) {
-            Text(text = "Continue")
+
+        Row {
+            Button(onClick = {
+                mContext.startActivity(Intent(mContext,layoutactivity::class.java))
+            },
+                shape = RoundedCornerShape(5.dp),
+                colors = ButtonDefaults.buttonColors(Color.DarkGray),
+                modifier = Modifier
+
+                    .padding(start = 30.dp, end = 30.dp)
+            ) {
+                Text(text = "Continue")
+            }
+
+            Button(onClick = {
+                mContext.startActivity(Intent(mContext,ExploreActivity::class.java))
+            },
+                shape = RoundedCornerShape(5.dp),
+                colors = ButtonDefaults.buttonColors(Color.DarkGray),
+                modifier = Modifier
+                    .padding(start = 30.dp, end = 30.dp)
+            ) {
+                Text(text = "Explore")
+            }
         }
 
 
