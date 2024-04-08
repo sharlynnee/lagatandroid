@@ -119,7 +119,7 @@ fun Explore(){
                         .width(160.dp)) {
                         Box(modifier = Modifier.fillMaxWidth(),
                             contentAlignment = Alignment.Center) {
-                            Image(painter = painterResource(id = R.drawable.sunset1),
+                            Image(painter = painterResource(id = R.drawable.b1),
                                 contentDescription = "sunset",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.FillBounds)
@@ -194,7 +194,7 @@ fun Explore(){
                         .width(160.dp)) {
                         Box(modifier = Modifier.fillMaxWidth(),
                             contentAlignment = Alignment.Center) {
-                            Image(painter = painterResource(id = R.drawable.sunset1),
+                            Image(painter = painterResource(id = R.drawable.b2),
                                 contentDescription = "sunset",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.FillBounds)
@@ -276,7 +276,7 @@ fun Explore(){
                         .width(160.dp)) {
                         Box(modifier = Modifier.fillMaxWidth(),
                             contentAlignment = Alignment.Center) {
-                            Image(painter = painterResource(id = R.drawable.sunset1),
+                            Image(painter = painterResource(id = R.drawable.b3),
                                 contentDescription = "sunset",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.FillBounds)
@@ -351,7 +351,7 @@ fun Explore(){
                         .width(160.dp)) {
                         Box(modifier = Modifier.fillMaxWidth(),
                             contentAlignment = Alignment.Center) {
-                            Image(painter = painterResource(id = R.drawable.sunset1),
+                            Image(painter = painterResource(id = R.drawable.b4),
                                 contentDescription = "sunset",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.FillBounds)
@@ -432,7 +432,7 @@ fun Explore(){
                         .width(160.dp)) {
                         Box(modifier = Modifier.fillMaxWidth(),
                             contentAlignment = Alignment.Center) {
-                            Image(painter = painterResource(id = R.drawable.sunset1),
+                            Image(painter = painterResource(id = R.drawable.b5),
                                 contentDescription = "sunset",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.FillBounds)
@@ -507,7 +507,7 @@ fun Explore(){
                         .width(160.dp)) {
                         Box(modifier = Modifier.fillMaxWidth(),
                             contentAlignment = Alignment.Center) {
-                            Image(painter = painterResource(id = R.drawable.sunset1),
+                            Image(painter = painterResource(id = R.drawable.b3),
                                 contentDescription = "sunset",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.FillBounds)

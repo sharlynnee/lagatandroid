@@ -1,5 +1,6 @@
 package com.example.lagat
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -13,6 +14,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Call
@@ -34,6 +36,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -65,6 +68,7 @@ fun MyForm(){
 
 
     ) {
+        val mContext = LocalContext.current
 
         var firstname by remember { mutableStateOf("") }
         var lastname by remember { mutableStateOf("") }
@@ -163,6 +167,17 @@ fun MyForm(){
             fontWeight = FontWeight.Bold,
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center)
+        Button(onClick = {
+            mContext.startActivity(Intent(mContext,LottieActivity::class.java))
+        },
+            shape = RoundedCornerShape(5.dp),
+            colors = ButtonDefaults.buttonColors(Color.DarkGray),
+            modifier = Modifier
+                .padding(start = 30.dp, end = 30.dp)
+        ) {
+            Text(text = "Lottie")
+        }
+
 
 
 

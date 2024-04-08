@@ -15,13 +15,16 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -36,12 +39,17 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.animateLottieCompositionAsState
+import com.airbnb.lottie.compose.rememberLottieComposition
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             Demo()
+
 
         }
     }
@@ -50,7 +58,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Demo(){
     
-    Column (modifier = Modifier.fillMaxSize()){
+    Column (modifier = Modifier
+        .fillMaxSize()
+        .verticalScroll(rememberScrollState())){
 
         val mContext = LocalContext.current
 
@@ -72,6 +82,16 @@ fun Demo(){
             Text(text = "Destination")
         }
 
+        Button(onClick = {
+            mContext.startActivity(Intent(mContext,AssignmentActivity::class.java))
+        },
+            shape = RoundedCornerShape(5.dp),
+            colors = ButtonDefaults.buttonColors(Color.DarkGray),
+            modifier = Modifier
+                .padding(start = 30.dp, end = 30.dp)
+        ) {
+            Text(text = "Assignment")
+        }
 
         Spacer(modifier = Modifier.height(15.dp))
         Text(text = "Types of cars",
@@ -113,6 +133,14 @@ fun Demo(){
         Text(text = "A programming language is a system of notation for writing computer programs.",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold)
+
+        //Lottie Animation
+        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.contact))
+        val progress by animateLottieCompositionAsState(composition)
+        LottieAnimation(composition, progress,
+            modifier = Modifier.size(300.dp)
+        )
+        //End of Lottie Animation
 
         //Centering an image
         Box(modifier = Modifier.fillMaxWidth(),
